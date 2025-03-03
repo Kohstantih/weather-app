@@ -8,7 +8,7 @@ export default defineConfig({
       },
     },
   },
-  base: process.env.NODE_ENV === 'production' ? '/rezilla__landing/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/weather-app/' : '/',
   resolve: {
     alias: {
       icons: 'public/icons',
