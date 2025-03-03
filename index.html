@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script type="module" crossorigin src="/rezilla__landing/assets/index-LB0s7F4k.js"></script>
+    <link rel="stylesheet" crossorigin href="/rezilla__landing/assets/index-B6XjPmGa.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1 class="app-title visually-hidden">Приложение прогноза погоды</h1>
+
+        <div class="header__body">
+          <div class="header__mode mode">
+            <label class="mode__widget">
+              <input
+                class="mode__switcher visually-hidden"
+                type="checkbox"
+                name="mode"
+                id="mode"
+                checked
+                data-mode-switcher
+              />
+            </label>
+
+            <p class="mode__name mode__name--dark">Темная тема</p>
+            <p class="mode__name mode__name--light">Светлая тема</p>
+          </div>
+
+          <form class="header__search search">
+            <button class="search__action" type="submit">
+              <svg class="search__action-icon">
+                <use href="icons/sprite/sprite.svg#loupe" />
+              </svg>
+            </button>
+
+            <label class="search__item">
+              <input
+                class="search__field"
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Введите название города"
+                required
+              />
+            </label>
+          </form>
+
+          <button class="header__button button button--with-icon button--accent" type="button">
+            <svg class="button__icon">
+              <use href="icons/sprite/sprite.svg#location" />
+            </svg>
+
+            <span>Текущая локация</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="main">
+        <article class="main__title capital">
+          <h2 class="capital__title">Санкт-Петербург</h2>
+
+          <div class="capital__body">
+            <p class="capital__time">
+              <time datetime="09:03">09:03</time>
+            </p>
+            <p class="capital__date date">
+              <time datetime="2025-02-28">Пятница, 28 февраля</time>
+            </p>
+          </div>
+        </article>
+
+        <article class="main__realtime realtime">
+          <h2 class="realtime__title">
+            <span class="realtime__title-date">Показатели погоды на</span>
+            <span class="realtime__title-date"><time datetime="2025-03-02">сегодня</time>:</span>
+          </h2>
+
+          <div class="realtime__content">
+            <section class="realtime__header realtime-main">
+              <h3 class="realtime-main__header-title visually-hidden">
+                Температура и Продолжительность светового дня
+              </h3>
+
+              <div class="realtime-main__temp">
+                <p class="realtime-main__temp-current">
+                  <span class="realtime-main__temp-current-value">
+                    24<span class="realtime-main__temp-current-degree">°C</span>
+                  </span>
+                </p>
+
+                <p class="realtime-main__temp-feels">
+                  <span class="realtime-main__temp-feels-text">Ощущается: </span>
+                  <span class="realtime-main__temp-feels-value">
+                    22<span class="realtime-main__temp-feels-degree">°C</span>
+                  </span>
+                </p>
+              </div>
+
+              <div class="realtime-main__daylight-box">
+                <article class="realtime-main__daylight-item daylight">
+                  <div class="daylight__icon-wrapper">
+                    <svg class="daylight__icon">
+                      <use href="icons/sprite/sprite.svg#sunrise" />
+                    </svg>
+                  </div>
+
+                  <div class="daylight__text">
+                    <h4 class="daylight__name">Восход</h4>
+                    <p class="daylight__time"><time datetime="06:37">06:37</time></p>
+                  </div>
+                </article>
+
+                <article class="realtime-main__daylight-item daylight">
+                  <div class="daylight__icon-wrapper">
+                    <svg class="daylight__icon">
+                      <use href="icons/sprite/sprite.svg#sunset" />
+                    </svg>
+                  </div>
+
+                  <div class="daylight__text">
+                    <h4 class="daylight__name">Закат</h4>
+                    <p class="daylight__time"><time datetime="06:37">20:42</time></p>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="realtime__body realtime-weather">
+              <h3 class="realtime-weather__title visually-hidden">Погода</h3>
+
+              <div class="realtime-weather__content">
+                <div class="realtime-weather__icon-wrapper">
+                  <svg class="realtime-weather__icon" viewBox="0 0 64 64">
+                    <use href="icons/day/sprite/sprite.svg#icon_1000"></use>
+                  </svg>
+                </div>
+
+                <p class="realtime-weather__text">Ясно</p>
+              </div>
+            </section>
+
+            <section class="realtime__footer realtime-indicators">
+              <h3 class="realtime-indicators__title visually-hidden">Показатели погоды</h3>
+
+              <div class="realtime-indicators__content">
+                <article class="realtime-indicators__item weather-indicator">
+                  <div class="weather-indicator__icon-wrapper">
+                    <svg class="weather-indicator__icon">
+                      <use href="icons/sprite/sprite.svg#humidity" />
+                    </svg>
+                  </div>
+
+                  <p class="weather-indicator__readings">
+                    <span class="weather-indicator__readings-value">41</span>
+                    <span class="weather-indicator__readings-unit">%</span>
+                  </p>
+
+                  <h4 class="weather-indicator__title">Влажность</h4>
+                </article>
+
+                <article class="realtime-indicators__item weather-indicator">
+                  <div class="weather-indicator__icon-wrapper">
+                    <svg class="weather-indicator__icon">
+                      <use href="icons/sprite/sprite.svg#wind" />
+                    </svg>
+                  </div>
+
+                  <p class="weather-indicator__readings">
+                    <span class="weather-indicator__readings-value">2</span>
+                    <span class="weather-indicator__readings-unit">м/с</span>
+                  </p>
+
+                  <h4 class="weather-indicator__title">Скорость ветра</h4>
+                </article>
+
+                <article class="realtime-indicators__item weather-indicator">
+                  <div class="weather-indicator__icon-wrapper">
+                    <svg class="weather-indicator__icon">
+                      <use href="icons/sprite/sprite.svg#pressure" />
+                    </svg>
+                  </div>
+
+                  <p class="weather-indicator__readings">
+                    <span class="weather-indicator__readings-value">997</span>
+                    <span class="weather-indicator__readings-unit">мм.р.ст.</span>
+                  </p>
+
+                  <h4 class="weather-indicator__title">Давление</h4>
+                </article>
+
+                <article class="realtime-indicators__item weather-indicator">
+                  <div class="weather-indicator__icon-wrapper">
+                    <svg class="weather-indicator__icon">
+                      <use href="icons/sprite/sprite.svg#ultraviolet" />
+                    </svg>
+                  </div>
+
+                  <p class="weather-indicator__readings">
+                    <span class="weather-indicator__readings-value">8</span>
+                  </p>
+
+                  <h4 class="weather-indicator__title" title="Ультрафиолетовый индекс">
+                    УФ-индекс
+                  </h4>
+                </article>
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <article class="main__forecast forecast">
+          <h2 class="forecast__title">Прогноз на 5 дней:</h2>
+
+          <div class="forecast__body">
+            <ul class="forecast__list">
+              <li class="forecast__item">
+                <a class="forecast__info" href="/">
+                  <span class="forecast__icon-wrapper">
+                    <svg class="forecast__icon" viewBox="0 0 64 64">
+                      <use href="icons/day/sprite/sprite.svg#icon_1243"></use>
+                    </svg>
+                  </span>
+
+                  <span class="forecast__temp">20<span class="forecast__degree">°C</span></span>
+
+                  <span class="forecast__date date"
+                    ><time datetime="2025-03-01">Суббота, 1 Марта</time></span
+                  >
+                </a>
+              </li>
+
+              <li class="forecast__item">
+                <a class="forecast__info" href="/">
+                  <span class="forecast__icon-wrapper">
+                    <svg class="forecast__icon" viewBox="0 0 64 64">
+                      <use href="icons/day/sprite/sprite.svg#icon_1243"></use>
+                    </svg>
+                  </span>
+
+                  <span class="forecast__temp">20<span class="forecast__degree">°C</span></span>
+
+                  <span class="forecast__date date"
+                    ><time datetime="2025-03-01">Суббота, 1 Марта</time></span
+                  >
+                </a>
+              </li>
+
+              <li class="forecast__item">
+                <a class="forecast__info" href="/">
+                  <span class="forecast__icon-wrapper">
+                    <svg class="forecast__icon" viewBox="0 0 64 64">
+                      <use href="icons/day/sprite/sprite.svg#icon_1243"></use>
+                    </svg>
+                  </span>
+
+                  <span class="forecast__temp">20<span class="forecast__degree">°C</span></span>
+
+                  <span class="forecast__date date"
+                    ><time datetime="2025-03-01">Суббота, 1 Марта</time></span
+                  >
+                </a>
+              </li>
+
+              <li class="forecast__item">
+                <a class="forecast__info" href="/">
+                  <span class="forecast__icon-wrapper">
+                    <svg class="forecast__icon" viewBox="0 0 64 64">
+                      <use href="icons/day/sprite/sprite.svg#icon_1243"></use>
+                    </svg>
+                  </span>
+
+                  <span class="forecast__temp">20<span class="forecast__degree">°C</span></span>
+
+                  <span class="forecast__date date"
+                    ><time datetime="2025-03-01">Суббота, 1 Марта</time></span
+                  >
+                </a>
+              </li>
+
+              <li class="forecast__item">
+                <a class="forecast__info" href="/">
+                  <span class="forecast__icon-wrapper">
+                    <svg class="forecast__icon" viewBox="0 0 64 64">
+                      <use href="icons/day/sprite/sprite.svg#icon_1243"></use>
+                    </svg>
+                  </span>
+
+                  <span class="forecast__temp">20<span class="forecast__degree">°C</span></span>
+
+                  <span class="forecast__date date"
+                    ><time datetime="2025-03-01">Суббота, 1 Марта</time></span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="main__hourly-forecast hourly-forecast">
+          <h2 class="hourly-forecast__title">Почасовой прогноз:</h2>
+
+          <div class="hourly-forecast__body">
+            <ul class="hourly-forecast__list">
+              <li class="hourly-forecast__item">
+                <article class="hour-details" data-hour-details data-hour-day>
+                  <h3 class="hour-details__time">12:00</h3>
+
+                  <div class="hour-details__icon-wrapper">
+                    <svg class="hour-details__icon" viewBox="0 0 64 64">
+                      <use href="icons/day/sprite/sprite.svg#icon_1201"></use>
+                    </svg>
+                  </div>
+
+                  <p class="hour-details__temp">
+                    <span class="hour-details__temp-number">26</span>
+                    <span class="hour-details__temp-degree">°C</span>
+                  </p>
+
+                  <div class="hour-details__wind-direction">
+                    <svg class="hour-details__wind-icon">
+                      <use href="icons/sprite/sprite.svg#direction"></use>
+                    </svg>
+                  </div>
+
+                  <p class="hour-details__wind-speed">
+                    <span class="hour-details__wind-value">3</span>
+                    <span class="hour-details__wind-unit">м/с</span>
+                  </p>
+                </article>
+              </li>
+
+              <li class="hourly-forecast__item">
+                <article class="hour-details" data-hour-details data-hour-day>
+                  <h3 class="hour-details__time">12:00</h3>
+
+                  <div class="hour-details__icon-wrapper">
+                    <svg class="hour-details__icon" viewBox="0 0 64 64">
+                      <use href="icons/day/sprite/sprite.svg#icon_1009"></use>
+                    </svg>
+                  </div>
+
+                  <p class="hour-details__temp">
+                    <span class="hour-details__temp-number">26</span>
+                    <span class="hour-details__temp-degree">°C</span>
+                  </p>
+
+                  <div class="hour-details__wind-direction">
+                    <svg class="hour-details__wind-icon">
+                      <use href="icons/sprite/sprite.svg#direction"></use>
+                    </svg>
+                  </div>
+
+                  <p class="hour-details__wind-speed">
+                    <span class="hour-details__wind-value">3</span>
+                    <span class="hour-details__wind-unit">м/с</span>
+                  </p>
+                </article>
+              </li>
+
+              <li class="hourly-forecast__item">
+                <article class="hour-details" data-hour-details data-hour-day>
+                  <h3 class="hour-details__time">12:00</h3>
+
+                  <div class="hour-details__icon-wrapper">
+                    <svg class="hour-details__icon" viewBox="0 0 64 64">
+                      <use href="icons/day/sprite/sprite.svg#icon_1243"></use>
+                    </svg>
+                  </div>
+
+                  <p class="hour-details__temp">
+                    <span class="hour-details__temp-number">26</span>
+                    <span class="hour-details__temp-degree">°C</span>
+                  </p>
+
+                  <div class="hour-details__wind-direction">
+                    <svg class="hour-details__wind-icon">
+                      <use href="icons/sprite/sprite.svg#direction"></use>
+                    </svg>
+                  </div>
+
+                  <p class="hour-details__wind-speed">
+                    <span class="hour-details__wind-value">3</span>
+                    <span class="hour-details__wind-unit">м/с</span>
+                  </p>
+                </article>
+              </li>
+
+              <li class="hourly-forecast__item">
+                <article class="hour-details" data-hour-details data-hour-night>
+                  <h3 class="hour-details__time">12:00</h3>
+
+                  <div class="hour-details__icon-wrapper">
+                    <svg class="hour-details__icon" viewBox="0 0 64 64">
+                      <use href="icons/day/sprite/sprite.svg#icon_1243"></use>
+                    </svg>
+                  </div>
+
+                  <p class="hour-details__temp">
+                    <span class="hour-details__temp-number">26</span>
+                    <span class="hour-details__temp-degree">°C</span>
+                  </p>
+
+                  <div class="hour-details__wind-direction">
+                    <svg class="hour-details__wind-icon">
+                      <use href="icons/sprite/sprite.svg#direction"></use>
+                    </svg>
+                  </div>
+
+                  <p class="hour-details__wind-speed">
+                    <span class="hour-details__wind-value">3</span>
+                    <span class="hour-details__wind-unit">м/с</span>
+                  </p>
+                </article>
+              </li>
+
+              <li class="hourly-forecast__item">
+                <article class="hour-details" data-hour-details data-hour-night>
+                  <h3 class="hour-details__time">12:00</h3>
+
+                  <div class="hour-details__icon-wrapper">
+                    <svg class="hour-details__icon" viewBox="0 0 64 64">
+                      <use href="icons/day/sprite/sprite.svg#icon_1243"></use>
+                    </svg>
+                  </div>
+
+                  <p class="hour-details__temp">
+                    <span class="hour-details__temp-number">26</span>
+                    <span class="hour-details__temp-degree">°C</span>
+                  </p>
+
+                  <div class="hour-details__wind-direction">
+                    <svg class="hour-details__wind-icon">
+                      <use href="icons/sprite/sprite.svg#direction"></use>
+                    </svg>
+                  </div>
+
+                  <p class="hour-details__wind-speed">
+                    <span class="hour-details__wind-value">3</span>
+                    <span class="hour-details__wind-unit">м/с</span>
+                  </p>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">
+          При поддержке
+          <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+        </p>
+      </footer>
+
+      <div class="loader hidden">
+        <img
+          class="loader__image"
+          src="images/loader.png"
+          alt="Loader"
+          width="200"
+          height="200"
+          loading="lazy"
+        />
+
+        <p class="loader__text">Loading...</p>
+      </div>
+    </div>
+
+  </body>
+</html>
