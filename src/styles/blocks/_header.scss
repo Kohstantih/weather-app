@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.header {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 75px;
+
+    @include tablet {
+      column-gap: 25px;
+    }
+
+    @include mobile {
+      column-gap: 20px;
+
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+  }
+
+  &__search {
+    width: 100%;
+
+    box-shadow: var(--shadow);
+
+    @include mobile {
+      order: 1;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    box-shadow: var(--shadow);
+  }
+}

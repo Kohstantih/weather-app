@@ -1,0 +1,29 @@
+@use '../helpers' as *;
+
+.capital {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 45px;
+
+  text-align: center;
+
+  @include tablet {
+    padding: 20px;
+  }
+
+  &__title {
+    @include flex-center;
+    @include fluid-text(36, 30);
+
+    flex-grow: 1;
+
+    font-weight: 700;
+  }
+
+  &__time {
+    @include fluid-text(96, 60);
+
+    font-weight: 700;
+  }
+}

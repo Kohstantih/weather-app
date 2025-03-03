@@ -1,0 +1,47 @@
+@use '../helpers' as *;
+
+.realtime-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  text-align: center;
+
+  &__content {
+    @include mobile {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+    }
+  }
+
+  &__icon {
+    --IconSize: 270px;
+    width: var(--IconSize);
+    height: var(--IconSize);
+
+    stroke: none;
+
+    @include widescreen {
+      --IconSize: clamp(220px, 15vw, 270px);
+    }
+
+    @include desktop {
+      --IconSize: clamp(150px, 15vw, 220px);
+    }
+
+    @include tablet {
+      --IconSize: 210px;
+    }
+
+    @include tablet {
+      --IconSize: 150px;
+    }
+  }
+
+  &__text {
+    @include fluid-text(32, 26);
+
+    font-weight: 600;
+  }
+}

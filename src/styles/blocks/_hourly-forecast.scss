@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.hourly-forecast {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 20px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+
+    @include widescreen {
+      column-gap: 20px;
+    }
+
+    @include desktop {
+      column-gap: clamp(10px, 1.45vw, 30px);
+    }
+
+    @include tablet {
+      column-gap: 30px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+    }
+  }
+}

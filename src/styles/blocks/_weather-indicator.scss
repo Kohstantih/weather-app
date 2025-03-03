@@ -1,0 +1,22 @@
+@use '../helpers' as *;
+
+.weather-indicator {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  &__icon {
+    --IconSize: 60px;
+
+    width: var(--IconSize);
+    height: var(--IconSize);
+
+    @include desktop {
+      --IconSize: 45px;
+    }
+  }
+}

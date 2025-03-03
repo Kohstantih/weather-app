@@ -1,0 +1,50 @@
+@use '../helpers' as *;
+
+.button {
+  --IconColor: var(--color-dark);
+
+  @include reset-button;
+  @include fluid-text(22, 16);
+
+  min-width: fit-content;
+  height: var(--button-height);
+  padding-inline: 25px;
+
+  font-weight: 700;
+
+  color: var(--color-light);
+
+  border-radius: var(--border-radius);
+
+  &--with-icon {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+  }
+
+  &--accent {
+    background-color: var(--color-accent);
+
+    @include hover {
+      background-color: var(--color-dark-soft);
+      --IconColor: var(--color-accent);
+    }
+
+    &:active {
+      background-color: var(--color-accent);
+      --IconColor: var(--color-dark);
+    }
+  }
+
+  &__icon {
+    --IconSize: 35px;
+    width: var(--IconSize);
+    height: var(--IconSize);
+
+    color: var(--IconColor);
+
+    @include tablet {
+      --IconSize: 25px;
+    }
+  }
+}

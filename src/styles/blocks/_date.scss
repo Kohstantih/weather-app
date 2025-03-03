@@ -1,0 +1,6 @@
+@use '../helpers' as *;
+
+.date {
+  @include fluid-text(20, 18);
+  font-weight: 500;
+}

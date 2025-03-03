@@ -1,0 +1,47 @@
+@use '../helpers' as *;
+
+.realtime {
+  &__title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      justify-content: space-around;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+    }
+  }
+
+  &__header {
+    max-width: 32%;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__body {
+    max-width: 32%;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__footer {
+    max-width: 36%;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}

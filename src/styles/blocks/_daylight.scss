@@ -1,0 +1,11 @@
+@use '../helpers' as *;
+
+.daylight {
+  display: flex;
+  column-gap: 10px;
+  
+  &__icon {
+    width: 48px;
+    height: 48px;
+  }
+}

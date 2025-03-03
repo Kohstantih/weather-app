@@ -1,0 +1,73 @@
+@use '../helpers' as *;
+
+.search {
+  --ActionSize: 40px;
+  --InlinePadding: 30px;
+
+  position: relative;
+
+  display: flex;
+  height: var(--button-height);
+
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-gray-light);
+
+  overflow: hidden;
+
+  @include hover {
+    outline: var(--outline-accent);
+  }
+
+  &:has(&__field:focus) {
+    outline: var(--outline-accent);
+  }
+
+  &__action {
+    @include reset-button;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    padding-right: var(--InlinePadding);
+
+    color: var(--color-search-icon);
+
+    @include hover {
+      color: var(--color-accent);
+    }
+
+    &:active {
+      color: var(--color-search-icon);
+    }
+  }
+
+  &__action-icon {
+    width: var(--ActionSize);
+    height: var(--ActionSize);
+  }
+
+  &__item {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__field {
+    width: 100%;
+    padding-left: var(--InlinePadding);
+    padding-right: calc(var(--ActionSize) + var(--InlinePadding) + 10px);
+
+    color: inherit;
+
+    border: none;
+    background-color: var(--color-bg);
+
+    &::placeholder {
+      color: var(--color-search-icon);
+    }
+  }
+}

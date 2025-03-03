@@ -1,0 +1,87 @@
+@use '../helpers' as *;
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 4%;
+  row-gap: 40px;
+
+  & > * {
+    min-height: 360px;
+    padding: 20px;
+
+    border-radius: var(--border-radius);
+    background-color: var(--color-bg);
+
+    box-shadow: var(--shadow-sections);
+
+    @include desktop {
+      min-height: 300px;
+    }
+
+    @include mobile {
+      min-height: fit-content;
+    }
+  }
+
+  &__title {
+    width: 38%;
+
+    @include tablet {
+      width: 48%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__realtime {
+    width: 58%;
+
+    @include tablet {
+      order: 2;
+      width: 100%;
+    }
+
+    @include mobile {
+      order: 1;
+    }
+  }
+
+  &__forecast {
+    width: 31%;
+
+    @include desktop {
+      width: 38%;
+    }
+
+    @include tablet {
+      order: 1;
+      width: 48%;
+    }
+
+    @include mobile {
+      order: 3;
+      width: 100%;
+    }
+  }
+
+  &__hourly-forecast {
+    width: 65%;
+
+    @include desktop {
+      width: 58%;
+    }
+
+    @include tablet {
+      order: 3;
+      width: 100%;
+    }
+
+    @include mobile {
+      order: 2;
+    }
+  }
+}

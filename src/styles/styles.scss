@@ -1,0 +1,28 @@
+@use 'fonts';
+@use 'normalize';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/mode';
+@use 'blocks/search';
+@use 'blocks/button';
+@use 'blocks/date';
+
+@use 'blocks/app';
+
+@use 'blocks/header';
+
+@use 'blocks/main';
+@use 'blocks/capital';
+@use 'blocks/realtime';
+@use 'blocks/realtime-main';
+@use 'blocks/daylight';
+@use 'blocks/realtime-weather';
+@use 'blocks/realtime-indicators';
+@use 'blocks/weather-indicator';
+@use 'blocks/forecast';
+@use 'blocks/hourly-forecast';
+@use 'blocks/hour-details';
+
+@use 'blocks/footer';

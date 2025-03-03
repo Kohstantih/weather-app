@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "public",
+    "paths": {
+      "icons/*": ["icons/*"],
+      "images/*": ["images/*"],
+      "fonts/*": ["fonts/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.forecast {
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop {
+      justify-content: space-around;
+    }
+
+    @include mobile {
+      justify-content: center;
+      column-gap: 20px;
+    }
+  }
+
+  &__icon {
+    --IconSize: 60px;
+
+    width: var(--IconSize);
+    height: var(--IconSize);
+
+    stroke: none;
+
+    @include desktop {
+      --IconSize: 40px;
+    }
+  }
+
+  &__temp {
+    @include fluid-text(24, 20);
+
+    font-weight: 600;
+  }
+}

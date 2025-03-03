@@ -1,0 +1,47 @@
+@use '../helpers' as *;
+
+.realtime-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mobile {
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 25px;
+  }
+
+  &__temp-current {
+    @include fluid-text(80, 60);
+
+    font-weight: 700;
+
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__temp-feels {
+    font-weight: 600;
+  }
+
+  &__temp-feels-value {
+    @include fluid-text(24, 22);
+  }
+
+  &__daylight-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__daylight-item {
+    min-width: 135px;
+
+    @include mobile {
+      min-width: 120px;
+    }
+  }
+}

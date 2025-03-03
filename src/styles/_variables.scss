@@ -1,0 +1,62 @@
+@use 'helpers/' as *;
+
+:root {
+  --font-family: 'Poppins', sans-serif;
+
+  --app-width: 1500px;
+  --app-gap: 60px;
+
+  --color-dark: #000000;
+  --color-dark-soft: #292929;
+  --color-gray-dark: #373636;
+  --color-gray: #444444;
+  --color-gray-light: #d9d9d9;
+  --color-light: #ffffff;
+  --color-light-murky: #ffffff6b;
+  --color-accent: #4cbb17;
+
+  --color-bg: var(--color-gray-light);
+  --color-primary: var(--color-dark);
+  --color-border: var(--color-dark);
+  --color-search-icon: var(--color-gray-dark);
+
+  --button-height: 60px;
+
+  --border: 1px solid var(--color-border);
+  --border-radius: 40px;
+  --border-radius-sections: 30px;
+
+  --outline-accent: 2px solid var(--color-accent);
+
+  --shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.25);
+  --shadow-sections: 10px 10px 4px 0 rgba(0, 0, 0, 0.5);
+
+  --transition-duration: 0.2s;
+
+  --gradient-bg-app: linear-gradient(135deg, #fff 0%, rgba(70, 97, 115, 0) 100%);
+  --gradient-text: linear-gradient(48deg, #292929 0%, rgba(255, 255, 255, 0) 100%);
+  --gradient-bg-day: linear-gradient(145deg, #f88508 0%, rgba(246, 250, 217, 0) 100%);
+  --gradient-bg-night: linear-gradient(155deg, #443d64 0%, rgba(101, 130, 198, 0) 100%);
+
+  &:has([#{$attr-switcher}]:checked) {
+    --color-bg: var(--color-gray);
+    --color-primary: var(--color-light);
+    --color-border: transparent;
+    --color-search-icon: var(--color-light-murky);
+    --bg-hour-details: var(--color-gray-dark);
+    --gradient-bg-app: linear-gradient(131deg, #383838 0%, rgba(158, 158, 158, 0) 100%);
+    --gradient-text: linear-gradient(68deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:has([#{$attr-switcher}]:not(:checked)) {
+    --bg-hour-details: var(--gradient-bg-night);
+
+    *[#{$attr-hour-day}] {
+      --bg-hour-details: var(--gradient-bg-day);
+    }
+  }
+
+  @include tablet {
+    --app-gap: 30px;
+  }
+}
